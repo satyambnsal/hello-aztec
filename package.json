@@ -1,0 +1,23 @@
+{
+  "name": "token-app",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun run clean && tsc -b",
+    "build:dev": "tsc -b --watch",
+    "clean": "rm -rf ./dest tsconfig.tsbuildinfo",
+    "start": "bun run build && DEBUG='token' node ./dest/index.js"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@aztec/aztec.js": "^0.16.9",
+    "@aztec/noir-contracts": "^0.16.9",
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}
